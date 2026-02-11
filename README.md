@@ -15,6 +15,7 @@ using **Striver’s A2Z DSA Sheet** in **C++**.
 
 | Day 1 | Loops, Functions, Pass by Value & Reference |
 | Day 2 | Patterns |
+| Day 3 | pattern problems |
 
 ## 🧑‍💻 Language
 - C++
