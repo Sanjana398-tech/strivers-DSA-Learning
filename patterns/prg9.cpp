@@ -2,6 +2,30 @@
 using namespace std;
 
 
+    
+    void pattern7(int N) {
+        // Outer loop for rows
+        for (int i = 0; i < N; i++) {
+            
+            // Print leading spaces (N - i - 1 spaces)
+            for (int j = 0; j < N - i - 1; j++) {
+                cout << " ";
+            }
+
+            // Print stars (2*i + 1 stars)
+            for (int j = 0; j < 2 * i + 1; j++) {
+                cout << "*";
+            }
+
+            // Print trailing spaces (optional, same count as leading spaces)
+            for (int j = 0; j < N - i - 1; j++) {
+                cout << " ";
+            }
+
+            // Move to next row
+            cout << endl;
+        }
+    }
     void pattern8(int N) {
         // Outer loop for rows
         for (int i = 0; i < N; i++) {
@@ -28,9 +52,11 @@ using namespace std;
     }
 
 
+
 int main() {
     
     int N = 5;
-   pattern8(N);
+    pattern7(N);
+    pattern8(N);
     return 0;
 }
