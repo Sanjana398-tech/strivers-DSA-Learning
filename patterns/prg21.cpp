@@ -10,7 +10,7 @@ void prg21(int n){
     }
 }
 int main(){
-    int n=5;
+    int n=6;
     prg21(n);
     return 0;
 }

@@ -19,6 +19,7 @@ using **Striver’s A2Z DSA Sheet** in **C++**.
 | Day 4 | pattern problems and stl |
 | Day 5 | pattern problems |
 | Day 6 | pattern problems |
+completed with patterns and STL concepts
 
 ## 🧑‍💻 Language
 - C++
