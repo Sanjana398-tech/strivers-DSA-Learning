@@ -26,7 +26,7 @@ void nextPermutation(int arr[],int n){
     reverse(arr+index+1,arr+n);
 }
 int main(){
-    int arr[]={4,5,8,6,2,1};
+    int arr[]={3,2,1};
     int n=sizeof(arr)/sizeof(arr[0]);
     nextPermutation(arr,n);
     cout<<"next permutation= ";
