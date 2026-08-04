@@ -50,3 +50,63 @@
 //     }
 //     return 0;
 // }
+
+// #include<iostream>
+// using namespace std;
+// int consecutiveones(int arr[],int n){
+//     int count =0;
+//     int max=0;
+//     for(int i=0;i<n;i++){
+//         if(arr[i]==1){
+//             count=count+1;
+    
+
+//         }
+//         else{
+//             count=0;
+//         }
+//         if(count>max){
+//             max=count;
+        
+//     }
+// }
+// return max;
+// }
+// int main(){
+//     int arr[]={1,1,0,1,1,1,0,1};
+//     int n=8;
+//     int result=consecutiveones(arr,n);
+//     cout<<"The maximum number of consecutive ones is: "<<result;
+//     return 0;
+// }
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void moveZeroes(vector<int>& nums) {
+
+    int j = 0;
+
+    for(int i = 0; i < nums.size(); i++) {
+
+        if(nums[i] != 0) {
+
+            swap(nums[i], nums[j]);
+
+            j++;
+        }
+    }
+}
+
+int main() {
+
+    vector<int> nums = {0,1,0,3,12};
+
+    moveZeroes(nums);
+
+    for(int x : nums) {
+        cout << x << " ";
+    }
+
+    return 0;
+}
