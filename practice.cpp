@@ -80,33 +80,80 @@
 //     return 0;
 // }
 
-#include<bits/stdc++.h>
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// void moveZeroes(vector<int>& nums) {
+
+//     int j = 0;
+
+//     for(int i = 0; i < nums.size(); i++) {
+
+//         if(nums[i] != 0) {
+
+//             swap(nums[i], nums[j]);
+
+//             j++;
+//         }
+//     }
+// }
+
+// int main() {
+
+//     vector<int> nums = {0,1,0,3,12};
+
+//     moveZeroes(nums);
+
+//     for(int x : nums) {
+//         cout << x << " ";
+//     }
+
+//     return 0;
+// }
+
+//missing number in an array
+// #include<iostream>
+// using namespace std;
+// int missingnu(int arr[],int n){
+//     int sum=0;
+//     for(int i=0;i<n;i++){
+//         sum=sum+arr[i];
+
+//     }
+//     int total=(n+1)*(n+2)/2;
+//     int result=total-sum;
+//     return result;
+
+
+// }
+// int main(){
+//     int arr[]={1,2,3,5};
+//     int n=4;
+//     int result=missingnu(arr,n);
+//     cout<<"The missing number is: "<<result;
+//     return 0;
+// }
+
+#include<iostream>
 using namespace std;
-
-void moveZeroes(vector<int>& nums) {
-
-    int j = 0;
-
-    for(int i = 0; i < nums.size(); i++) {
-
-        if(nums[i] != 0) {
-
-            swap(nums[i], nums[j]);
-
-            j++;
+int singlenum(int arr[],int n){
+    for(int i=0;i<n;i++){
+        int count=0;
+        for(int j=0;j<n;j++){
+            if(arr[i]==arr[j]){
+                count++;
+            }
+        }
+        if(count==1){
+            return arr[i];
         }
     }
+    return -1;
 }
-
-int main() {
-
-    vector<int> nums = {0,1,0,3,12};
-
-    moveZeroes(nums);
-
-    for(int x : nums) {
-        cout << x << " ";
-    }
-
+int main(){
+    int arr[]={1,2,3,2,1};
+    int n=5;
+    int result=singlenum(arr,n);
+    cout<<"The single number is: "<<result;
     return 0;
 }
