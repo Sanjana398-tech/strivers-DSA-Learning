@@ -134,26 +134,59 @@
 //     return 0;
 // }
 
+// #include<iostream>
+// using namespace std;
+// int singlenum(int arr[],int n){
+//     for(int i=0;i<n;i++){
+//         int count=0;
+//         for(int j=0;j<n;j++){
+//             if(arr[i]==arr[j]){
+//                 count++;
+//             }
+//         }
+//         if(count==1){
+//             return arr[i];
+//         }
+//     }
+//     return -1;
+// }
+// int main(){
+//     int arr[]={1,2,3,2,1};
+//     int n=5;
+//     int result=singlenum(arr,n);
+//     cout<<"The single number is: "<<result;
+//     return 0;
+// }
+
 #include<iostream>
 using namespace std;
-int singlenum(int arr[],int n){
-    for(int i=0;i<n;i++){
-        int count=0;
-        for(int j=0;j<n;j++){
-            if(arr[i]==arr[j]){
-                count++;
-            }
+int merge(int arr[],int n,int arr2[],int m){
+    int i=0,j=0;
+    while(i<n && j<m){
+        if(arr[i]<arr2[j]){
+            cout<<arr[i]<<" ";
+            i++;
         }
-        if(count==1){
-            return arr[i];
+        else{
+            cout<<arr2[j]<<" ";
+            j++;
         }
     }
-    return -1;
+    while(i<n){
+        cout<<arr[i]<<" ";
+        i++;
+    }
+    while(j<m){
+        cout<<arr2[j]<<" ";
+        j++;
+    }
 }
 int main(){
-    int arr[]={1,2,3,2,1};
-    int n=5;
-    int result=singlenum(arr,n);
-    cout<<"The single number is: "<<result;
+    int arr[]={1,3,5,7};
+    int n=4;
+    int arr2[]={2,4,6,8};
+    int m=4;
+    cout<<"The merged array is: ";
+    merge(arr,n,arr2,m);
     return 0;
 }
