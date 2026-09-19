@@ -1,30 +1,28 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
-
-void moveZeroes(vector<int>& nums) {
-
-    int j = 0;
-
-    for(int i = 0; i < nums.size(); i++) {
-
-        if(nums[i] != 0) {
-
-            swap(nums[i], nums[j]);
-
+void moveZeroes(int arr[],int n){
+    int temp[100];
+    int j=0;
+    for(int i=0;i<n;i++){
+        if(arr[i]!=0){
+            temp[j]=arr[i];
             j++;
         }
     }
-}
-
-int main() {
-
-    vector<int> nums = {0,1,0,3,12};
-
-    moveZeroes(nums);
-
-    for(int x : nums) {
-        cout << x << " ";
+    while(j<n){
+        temp[j]=0;
+        j++;
     }
-
+    for(int i=0;i<n;i++){
+        arr[i]=temp[i];
+    }
+}
+int main(){
+    int arr[]={0,1,0,3,12};
+    int n=5;
+    moveZeroes(arr,n);
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
     return 0;
 }
